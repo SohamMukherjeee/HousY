@@ -136,7 +136,7 @@ typings/
 .next
 
 # Nuxt.js build / generate output
-.nuxt
+#.nuxt
 #dist
 
 # Storybook build outputs
