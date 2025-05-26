@@ -1,5 +1,5 @@
-dist
-dist-ssr
+#dist
+#dist-ssr
 *.local
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,windows,macos,linux,test
