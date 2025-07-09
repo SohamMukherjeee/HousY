@@ -17,6 +17,7 @@ import {
   IoGolf,
 } from "react-icons/io5";
 import { SlUser } from "react-icons/sl";
+import ScheduleMeetingButton from "./ScheduleMeetingButton";
 
 // Import Swiper styles
 import "swiper/css";
@@ -66,14 +67,6 @@ const PropertyDetails = () => {
         <p className="mt-2 flex flex-row items-center gap-2 text-gray-700 text-base">
           <SlUser className="text-xl" />
           <span className="ml-1">{property.owner_name}</span>
-          <span className="ml-1">{property.owner_contact}</span>
-          <a
-            href={`tel:${property.owner_contact}`}
-            className="text-l cursor-pointer"
-            title="Call Now"
-          >
-            <IoOpenOutline className="text-l cursor-pointer" />
-          </a>
         </p>
         <p className="mt-2 flex flex-row items-center gap-2 text-gray-700 text-base">
           <IoBedOutline className="text-xl" />
@@ -94,6 +87,11 @@ const PropertyDetails = () => {
           <IoCalendarClearOutline className="text-xl" />
           <span className="ml-1">Year Built {property.year_built}</span>
         </p>
+
+        <div className="mt-2 flex items-center">
+          <ScheduleMeetingButton property={property} />
+        </div>
+
         <p className="mt-2 flex items-center gap-2 text-gray-700 text-base">
           <IoDocumentTextSharp className="sm:text-3xl" />
           <span className="ml-1 py-10">{property.description}</span>

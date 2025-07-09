@@ -3,7 +3,7 @@ import { Navigate } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 
 const PrivateRoute = ({ children }) => {
-  const { currentUser } = useAuth(); // ✅ will no longer be undefined
+  const { currentUser } = useAuth();
 
   return currentUser ? children : <Navigate to="/login" replace />;
 };

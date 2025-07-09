@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import { IoOpenOutline } from "react-icons/io5";
 function Searchbar({ className }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
@@ -36,18 +36,23 @@ function Searchbar({ className }) {
         {results.map((item) => (
           <li
             key={item._id}
-            className="bg-[#C7C7C7] border-0.5 my-1  hover:bg-[#EBEBEB]"
+            className="bg-[#C7C7C7] border border-gray-300 my-1 hover:bg-[#EBEBEB] group relative"
           >
             <Link
               to={`/buy/${item._id}`}
               style={{ textDecoration: "none", color: "inherit" }}
             >
-              <p>
-                Type: {item.type}, Price: ₹{item.price}
-              </p>
-              <p>
-                Location: {item.city}, PIN: {item.pin}
-              </p>
+              <div className="flex flex-col px-4 py-2 relative">
+                <p>
+                  Type: {item.type}, Price: ₹{item.price}
+                </p>
+                <p>
+                  Location: {item.city}, PIN: {item.pin}
+                </p>
+
+                {/* Icon in top-right corner on hover */}
+                <IoOpenOutline className="absolute text-2xl top-2 right-2 text-gray-600 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
+              </div>
             </Link>
           </li>
         ))}

@@ -1,3 +1,5 @@
+import FAQ from "./FAQ";
+import Testimonals from "./Testimonals";
 function Timeline() {
   return (
     <div className="flex items-center justify-center min-h-screen w-full flex-col gap-15">
@@ -122,6 +124,30 @@ function Timeline() {
             </small>
           </div>
         </div>
+      </div>
+      <div className="faq-section w-3/4 flex flex-col justify-center items-center pt-10 sm:pt-20">
+        <h1 className="text-2xl pt-7 font-bold text-center">
+          Hear From<span className="text-[#D3766A]"> Happy </span>Clients
+        </h1>
+        <div className="flex justify-center items-center sm:flex-row  flex-col w-full px-5 gap-x-9 gap-y-4 pt-20 pb-10">
+          <Testimonals
+            props={{
+              name: "Ashmita Dutta (Kolkata)",
+              desc: "I was surprised how easy it was to find and connect directly with the property owner on Housy. No middlemen, no delays,just honest conversations and quick decisions.",
+            }}
+          />
+          <Testimonals
+            props={{
+              name: "Ankur Mehta (Pune)",
+              desc: "I needed help navigating the property market in a new city, and the agents on Housy were super professional and responsive. One of them helped me find a perfect 2BHK within my budget in just three days.",
+            }}
+          />
+        </div>
+        <h1 className="text-xl sm:text-2xl pt-20 pb-10 font-bold text-center">
+          Need Help? Here Are Some <span className="text-[#D3766A]">FAQs</span>
+        </h1>
+
+        <FAQ className="pb-10" />
       </div>
     </div>
   );

@@ -93,10 +93,10 @@ const StepTwo = () => {
         />
       </div>
       <div>
-        <label>Owner Contact No</label>
+        <label>Owner Email</label>
         <input
           {...register("owner_contact", { required: true })}
-          placeholder="+91"
+          placeholder="@gmai.com"
           className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
       </div>
