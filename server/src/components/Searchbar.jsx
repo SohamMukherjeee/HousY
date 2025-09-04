@@ -24,13 +24,15 @@ function Searchbar({ className }) {
   };
 
   return (
-    <div className={`relative ${className}`.trim()}>
+    <div
+      className={`relative justify-center items-center flex flex-col bg-[#2C2C2C] rounded-4xl rounded-b-3xl ${className}`.trim()}
+    >
       <input
         type="text"
         placeholder="Search by City or PIN..."
         value={query}
         onChange={handleSearch}
-        className="w-full h-full px-4 border rounded-md shadow-sm"
+        className="w-full h-full px-9 border-3 shadow-sm rounded-3xl sm:rounded-3xl border-[#2C2C2C] border-b-8 focus:outline-none bg-white "
       />
       <ul>
         {results.map((item) => (
@@ -57,6 +59,9 @@ function Searchbar({ className }) {
           </li>
         ))}
       </ul>
+      <h1 className="text-center text-white font-sans  text-sm ">
+        200+ Properties listed
+      </h1>
     </div>
   );
 }

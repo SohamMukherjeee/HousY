@@ -14,8 +14,8 @@ function Herosec() {
             <span className="text-[#D3766A]">Sell. </span>
             <span className="text-black">Connect.</span>
           </h1>
-          <div className="sr flex justify-center items-center  w-full">
-            <Searchbar className="w-3/4 h-10 sm:h-20 bg-white border border-gray-300 rounded-md" />
+          <div className="sr flex justify-center items-center w-full">
+            <Searchbar className="w-70 sm:w-130 h-20 sm:h-24" />
           </div>
         </div>
       </div>
