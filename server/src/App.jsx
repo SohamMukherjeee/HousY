@@ -10,6 +10,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import { ToastContainer, toast } from "react-toastify";
 import NotFound from "./pages/NotFound";
 import AgentList from "./pages/AgentList";
+import LandingP from "./pages/LandingPage/LandingP";
 function App() {
   return (
     <Router>
@@ -45,6 +46,7 @@ function App() {
             </PrivateRoute>
           }
         />
+        <Route path="/test1" element={<LandingP />} />
       </Routes>
       <ToastContainer />
     </Router>
