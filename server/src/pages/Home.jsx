@@ -6,12 +6,14 @@ import Agentcon from "../components/Agentcon";
 import Timeline from "../components/Timeline";
 import Searchbar from "../components/Searchbar";
 import Footer from "../components/Footer";
+import LandingP from "./LandingPage/LandingP";
 function Home() {
   return (
     <>
       <div className="overflow-x-hidden">
-        <Navbar />
-        <Herosec />
+        {/* <Navbar />
+        <Herosec /> */}
+        <LandingP />
         <div className="flex flex-col items-center justify-center py-8 ">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">
             <span className="text-[#D3766A]">Housy</span> is Available In
