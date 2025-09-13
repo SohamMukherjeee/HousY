@@ -171,8 +171,13 @@ const CardNav = ({
             />
           </div>
 
-          <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none">
-            <img src={logo} alt={logoAlt} className="logo h-[28px]" />
+          <div className="logo-container flex items-center md:absolute md:left-1/2 md:top-1/2 md:-translate-x-1/2 md:-translate-y-1/2 order-1 md:order-none hover:cursor-pointer">
+            <img
+              src={logo}
+              alt={logoAlt}
+              className="logo h-[28px]"
+              onClick={() => navigate("/")}
+            />
           </div>
 
           <button
@@ -207,10 +212,10 @@ const CardNav = ({
                 {item.links?.map((lnk, i) => (
                   <a
                     key={`${lnk.label}-${i}`}
-                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px]"
+                    className="nav-card-link inline-flex items-center gap-[6px] no-underline cursor-pointer transition-opacity duration-300 hover:opacity-75 text-[15px] md:text-[16px] hover:underline"
                     href={lnk.href}
                     aria-label={lnk.ariaLabel}
-                    onClick={() => navigate(`${item.label.toLowerCase()}`)}
+                    onClick={() => navigate(`/${item.label.toLowerCase()}`)}
                   >
                     <GoArrowUpRight
                       className="nav-card-link-icon shrink-0"
